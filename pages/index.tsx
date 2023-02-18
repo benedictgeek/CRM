@@ -1,4 +1,6 @@
 import Head from "next/head";
+import DOMPurify from "dompurify";
+import { Button } from "tailwind-component-library";
 
 export default function Home() {
   return (
@@ -18,7 +20,11 @@ export default function Home() {
           <div className="pl-4 text-white">Contacts</div>
         </div>
         <div>SEARCH</div>
+        <form>
+          <button type="submit">SUBMIT</button>
+        </form>
       </header>
+      <Button>FROM PACKAGE</Button>
     </>
   );
 }

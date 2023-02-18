@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+console.log(
+  "SOMETHING DIFF",
+  require("tailwind-component-library/base-config")
+);
 module.exports = {
-  content: ["./pages/**/*.{js,tsx,ts}"],
+  presets: [require("tailwind-component-library/base-config")],
   theme: {
     extend: {
       colors: {
-        headerBorderColor: "#373B40"
-      }
+        headerBorderColor: "#373B40",
+      },
     },
   },
   plugins: [],
-}
+};
